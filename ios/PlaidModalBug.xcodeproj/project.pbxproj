@@ -206,10 +206,12 @@
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PlaidModalBugTests" */;
 			buildPhases = (
 				73E7ADA7414C14551C99102F /* [CP] Check Pods Manifest.lock */,
+				952200758AC62266A11F603D /* [CP] Prepare Artifacts */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				3E372BE997AF031F5530705C /* [CP] Copy Pods Resources */,
+				8287DCF15F9408919D5C3548 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,11 +229,13 @@
 			buildPhases = (
 				3961BE1F7B77A05C45DF247C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
+				DADCEF50340F9F0B1FB5530D /* [CP] Prepare Artifacts */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				89B5E4C725D0708033FAB049 /* [CP] Copy Pods Resources */,
+				07BD4B47A3A9EE4E6F11AEF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +381,23 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		07BD4B47A3A9EE4E6F11AEF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug/Pods-PlaidModalBug-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug/Pods-PlaidModalBug-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1C1E1584EE18244254FF8D76 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,6 +496,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8287DCF15F9408919D5C3548 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug-PlaidModalBugTests/Pods-PlaidModalBug-PlaidModalBugTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug-PlaidModalBugTests/Pods-PlaidModalBug-PlaidModalBugTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		89B5E4C725D0708033FAB049 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -491,6 +529,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug/Pods-PlaidModalBug-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		952200758AC62266A11F603D /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug-PlaidModalBugTests/Pods-PlaidModalBug-PlaidModalBugTests-artifacts.sh",
+				"${PODS_ROOT}/Plaid/LinkKit.xcframework",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug-PlaidModalBugTests/Pods-PlaidModalBug-PlaidModalBugTests-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DADCEF50340F9F0B1FB5530D /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug/Pods-PlaidModalBug-artifacts.sh",
+				"${PODS_ROOT}/Plaid/LinkKit.xcframework",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlaidModalBug/Pods-PlaidModalBug-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DAFD9686A5C979731B617AD3 /* [CP] Check Pods Manifest.lock */ = {
